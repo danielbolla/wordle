@@ -1,0 +1,35 @@
+:host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: solid 1px black;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.guessed {
+  background-color: lightgray;
+}
+
+.guessed.exists {
+  background-color: yellow;
+}
+
+.guessed.correct {
+  background-color: lightgreen;
+}

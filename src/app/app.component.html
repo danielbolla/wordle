@@ -1,0 +1,14 @@
+<div
+  *ngFor="let guess of game.guesses | limitGuesses: 6; let i = index"
+  class="row"
+>
+  <div
+    *ngFor="let char of guess | padSplit: 5; let j = index"
+    class="cell"
+    [class.guessed]="i < game.guesses.length"
+    [class.correct]="game.solution[j] == char"
+    [class.exists]="game.solution.includes(char)"
+  >
+    {{char}}
+  </div>
+</div>
